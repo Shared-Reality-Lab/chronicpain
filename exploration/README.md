@@ -9,7 +9,7 @@
  ## VR Environment
  A VR environment was developed as a starting point for future research to be built off of. This project can be found under the `Chronic-Pain-Exploratory-Museum` folder.
 
- Once a copy of the repo has been cloned to your local machine, it can be opened in the Unity Hub by clicking "Add" and opening the cloned folder. 
+ Once a copy of this folder has been cloned to your local machine, it can be opened in the Unity Hub by clicking "Add" and opening the cloned folder. 
 
  The README.md file in the `Chronic-Pain-Exploratory-Museum` folder has detailed instructions on how to build the Unity environment to the Meta Quest 2. 
  
