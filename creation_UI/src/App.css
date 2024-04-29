@@ -1,0 +1,51 @@
+.App {
+  text-align: center;
+  color: antiquewhite;
+}
+
+.photo-window img {
+  width: 100%;       /* Makes the image take up 100% of the container's width */
+  height: auto;      /* Scales the height automatically to maintain aspect ratio */
+  object-fit: cover; /* Optional: This will cover the whole area without stretching the image. */
+  height: 100%;
+}
+.App-header {
+  background-color: blanchedalmond;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust space as needed */
+  align-items: center;
+  padding-left: 30px;
+}
+
+.photo-window {
+  width: 45%; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  border: 2px solid blue; /* Adjust style as needed */
+  box-sizing: border-box;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px; /* Adjust space as needed */
+
+}
+
+.btn {
+  padding: 10px 20px;
+
+  color: cadetblue;
+}
+
+
