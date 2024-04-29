@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Chronic Pain UI Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This repository contains the code for a Chronic Pain UI application developed with React. The application is designed to assist 
+individuals in visualizing and managing chronic pain through interactive image handling. Users can upload their pain-related images 
+or create new ones based on descriptive prompts, enhancing their ability to communicate and reflect on their pain with healthcare providers
+or for personal insight.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Image Upload and Creation
+The application allows users to upload images depicting their experiences with chronic pain. Additionally, users can create images using a series of prompts that guide them to visualize their pain. This feature is aimed at providing users with the means to express aspects of their pain that may be difficult to articulate verbally.
 
-### `npm start`
+### Image Improvement and Interaction
+Once images are uploaded or created, users can modify these images to better reflect their current pain experience. Tools are provided within the UI to enhance and edit images according to user needs. This interactive process is central to the application, offering a user-friendly experience in managing the depiction of their pain.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Navigation Controls
+Users can navigate through the application easily. If a user is not satisfied with an edit, they can utilize the 'Go Back' feature to return to the previous page and undo changes. Conversely, if they are satisfied with the modifications, they can proceed to the next page where the updated image will be displayed. This functionality ensures that users maintain control over their visual expressions and can iterate on them until they are content with the results.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Progress so far
+Right now the functionalities are yet to be added, but the basic functions are implemented. For timing reasons, parts of the functionalities have been commented out.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
