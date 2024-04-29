@@ -20,3 +20,11 @@ Users can navigate through the application easily. If a user is not satisfied wi
 ### Progress so far
 Right now the functionalities are yet to be added, but the basic functions are implemented. For timing reasons, parts of the functionalities have been commented out.
 
+## Running the Application
+
+### Setup
+To get started with the application, clone the repository to your local machine. Navigate to the project directory and install the required dependencies:
+
+```bash
+npm install
+
