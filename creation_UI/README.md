@@ -17,7 +17,7 @@ Once images are uploaded or created, users can modify these images to better ref
 ### Navigation Controls
 Users can navigate through the application easily. If a user is not satisfied with an edit, they can utilize the 'Go Back' feature to return to the previous page and undo changes. Conversely, if they are satisfied with the modifications, they can proceed to the next page where the updated image will be displayed. This functionality ensures that users maintain control over their visual expressions and can iterate on them until they are content with the results.
 
-### Progress so far
+### Work Source
 Right now the functionalities are yet to be added, but the basic functions are implemented. For timing reasons, parts of the functionalities have been commented out.
 
 ## Running the Application
