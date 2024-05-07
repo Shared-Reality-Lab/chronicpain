@@ -1,0 +1,64 @@
+import pandas as pd
+import numpy as np
+from PIL import Image
+import requests
+from io import BytesIO
+import cv2
+import tensorflow as tf
+
+# Reading dataset
+def read_and_filter_data(url):
+   df = pd.read_csv(url)
+   return df['iiifthumburl'].dropna().sort_values()
+
+# Loading images without resizing to preserve original quality
+def load_and_preprocess_image(url):
+   response = requests.get(url)
+   image = Image.open(BytesIO(response.content))
+   return np.array(image)
+
+# Dark and red tones
+def analyze_color_usage(image):
+   dark_tones = np.mean(np.min(image, axis=2) < 77)
+   red_dominant = image[:, :, 0] > np.maximum(image[:, :, 1], image[:, :, 2])
+   red_tones = np.mean(image[red_dominant][:, 0] > 128)
+   return dark_tones, red_tones
+
+# Edge detection
+def detect_edges_and_scribbles(image):
+   gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+   edges = cv2.Canny(gray_image, 100, 200)
+   edge_percentage = np.sum(edges > 0) / (edges.shape[0] * edges.shape[1])
+   return edge_percentage, np.mean(edges > 0)
+
+# Calculate image vividness
+def calculate_vividness(image):
+   hsv_image = tf.image.rgb_to_hsv(image.astype(np.float32) / 255.0)
+   saturation = tf.reduce_mean(hsv_image[:, :, 1])
+   value = tf.reduce_mean(hsv_image[:, :, 2])
+   return (saturation * value).numpy()
+
+# Data processing and analysis
+def main(url):
+   sorted_urls = read_and_filter_data(url)
+   scores = []
+
+   for url in sorted_urls[:116000]:  # The complete dataset
+       try:
+           image = load_and_preprocess_image(url)
+           edge_percentage, edge_density = detect_edges_and_scribbles(image)
+           dark_tones, red_tones = analyze_color_usage(image)
+           vividness = calculate_vividness(image)
+           combined_score = edge_percentage + dark_tones + red_tones - vividness + edge_density
+           scores.append((url, combined_score))
+       except Exception as e:
+           # Error handling for unprocessable images
+           print(f"Failed to process image {url}: {e}")
+
+   # Displaying top 200 scored images
+   top_images = sorted(scores, key=lambda x: x[1], reverse=True)[:200]
+   for i, (url, score) in enumerate(top_images):
+       print(f"Top {i+1} URL: {url}, Score: {score:.2f}")
+
+if __name__ == "__main__":
+   main(url)
